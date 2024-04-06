@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>NRP/NPM</h2>
+        <form id="login-form" onsubmit="return checkLogin()">
+            <input type="text" id="login-input" placeholder="Masukkan nilai">
+            <button type="submit">Enter</button>
+        </form>
+        <p id="login-error" style="color: red; display: none;">wlee berati target saya bukan andaa</p>
+    </div>
+
+    <div id="content" style="display: none;">
+        <h1>bismillah, doa e ws pasti jok lali, dan sg pasti usahae ditingkati ws fix entok tarisa <br>eh maksutku ws fix pasti bisa</br></h1>
+    </div>
+
+    <script>
+        function checkLogin() {
+            var inputValue = document.getElementById("login-input").value;
+            if (inputValue === "23036010048") {
+                document.getElementById("login-container").style.display = "none";
+                document.getElementById("content").style.display = "block";
+                return false; // Prevent form submission
+            } else {
+                document.getElementById("login-error").style.display = "block";
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>
